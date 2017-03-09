@@ -1,0 +1,14 @@
+@import '_layout/_mixin';
+@import '_layout/_variables';
+@import '_layout/_adjustment';
+
+//----------------
+
+@import '_layout//normalize.scss';
+
+//----------------
+
+@import 'section/header';
+@import 'section/menu';
+@import 'section/main';
+@import 'section/footer';

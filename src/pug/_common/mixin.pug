@@ -1,0 +1,25 @@
+mixin menu(items, current)
+	ul.menu__items
+		each item, key in items 
+			if current==item
+				li.menu__item(class='menu__item_active')
+					a.menu__link(class='menu__link_active' href=key+'.html')= item
+			else 
+				li.menu__item
+					a.menu__link(href=key+'.html')= item
+
+mixin catalog(items)
+	each item, key in items
+		div.catalog__item
+			a.catalog__item__link(href=key+'.html')
+				img.catalog__item__img(src='images/'+ key +'-'+ item +'-trumb.png' alt='Это фото паруса '+item title='Это фото паруса '+item)
+				div.catalog__item__description
+					div.catalog__item__model= item
+
+mixin specific(items)
+	ul.goods__specific__items
+		each item, key in items
+			if key == 'Площадь паруса'
+				li.goods__specific__item!= key + ' ' + item +' м<sup>2</sup>'
+			else
+				li.goods__specific__item!= key + ' ' + item

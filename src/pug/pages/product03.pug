@@ -1,0 +1,44 @@
+extends ../layout
+
+block title 
+	title Паруса GAASTRA
+
+block menu
+	nav.menu
+		.content
+			+menu({'index':'Главная', 'catalog':'Каталог', 'contact':'Контакты'}, '')
+
+block main
+	div.content
+		aside.aside
+		article.maininfo
+			div.goods
+				h1.goods__mainHead Парус Manic
+				a.goods__link(href='images/product03-MANIC.png' target='_blank')
+					img.goods__img(src='images/product03-MANIC-trumb.png' alt='Это фото паруса Manic' title='Это фото паруса Manic')
+
+				h2.goods__head Описание товара
+				div.goods__textAboutShot
+					p.goods__text
+					| For 2017 the MANIC was carefully designed for absolute performance in all windsurfing conditions. Whether enjoying your local break or getting ready for your next intrepid journey, everyone knows the conditions are never the same twice and that´s why the MANIC was born.
+				
+				h2.goods__head Характеристики товара
+				+specific({'Площадь паруса':'3.3, 3.7, 4.0, 4.2, 4.5, 4.7, 5.0, 5.3, 5.7', 'Количество лат': '4', 'Мачта' : '370-430', 'Вес' : '3.1-4.0'})
+
+				h2.goods__head Подробное описание товара
+				div.goods__textAboutLong
+					p.goods__text
+					| For 2017 the MANIC was carefully designed for absolute performance in all windsurfing conditions. Whether enjoying your local break or getting ready for your next intrepid journey, everyone knows the conditions are never the same twice and that´s why the MANIC was born.
+					p.goods__text
+					| Used by many of our team riders while traveling and competing across the globe this proven design will not disappoint. The MANIC will keep you equally happy blasting around your local beach as well as attacking the long walls of the best breaks on earth.
+					p.goods__text
+					| The 2017 Manic offers the perfect balance between power and top end control.
+					p.goods__text
+					| A longer foot outline, combined with more shape in the top of the sail result in unrivaled control and even more radical maneuverability than ever before.
+					p.goods__text
+					| A new Constant Curve luff and improved outlines gifts the MANIC with the best wind range in our wave line up. For real world conditions and sailors who want to maximize their time on the water, the 2017 MANIC will get you planing early and keep you comfortable when the rest are rigging down.
+
+
+	
+
+	

@@ -1,0 +1,51 @@
+.goods {
+	.goods__mainHead,
+	.goods__head {
+		font-family: 'DINPro-Bold';
+	}
+	.goods__head
+	{
+		font-size: 18px;
+		font-weight: 400;
+		background-color: #eaeaea;
+	}
+	.goods__textAboutShot {
+		color: #707070;
+		font-size: 14px;
+		font-style: italic;
+		line-height: 16px;
+	}
+	.goods__textAboutLong {
+		color: #484343;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		text-align: left;
+	}
+	.goods__specific__items {
+		list-style-image: url('../images/icon-specific.svg');
+	}
+}
+.maininfo {
+	.welcomeHead,
+	.mainhead,
+	.address__head {
+		font-family: 'DINPro-Bold'; 
+	}
+	.contactToUs {
+		.contactToUs__description {
+			display: inline-block;
+			width: 90px;
+			vertical-align: top;
+		}
+		.contactToUs__name,
+		.contactToUs__password,
+		.contactToUs__email,
+		.contactToUs__subject
+		{
+		height: 20px;
+		color: white;
+		background-color: lightgray;
+		}
+	}
+}

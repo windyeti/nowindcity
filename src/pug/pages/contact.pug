@@ -1,0 +1,58 @@
+extends ../layout
+
+block title 
+	title NoWindCity -- Контакты
+
+block menu
+	nav.menu
+		.content
+			+menu({'index':'Главная', 'catalog':'Каталог', 'contact':'Контакты'}, 'Контакты')
+
+block main
+	div.content
+		aside.aside
+		article.maininfo
+			h1.mainhead Напишите нам
+			form.contactToUs(name='contactToUs' method='post' action='#')
+				fieldset.contactToUs__field
+					legend.contactToUs__head Форма для связи с нами
+					div.contactToUs
+						label.contactToUs__label 
+							span.contactToUs__description Ваше имя
+							input.contactToUs__name(type='text' name='name' placeholder='введите ваше имя' required)
+					div.contactToUs
+						label.contactToUs__label
+							pan.contactToUs__description Пароль
+							input.contactToUs__password(type='password' name='password' placeholder='введите ваш пароль' required)
+					div.contactToUs
+						label.contactToUs__label 
+							span.contactToUs__description Емайл
+							input.contactToUs__email(type='email' name='email' placeholder='введите ваш емайл')
+					div.contactToUs
+						label.contactToUs__label 
+							span.contactToUs__description Тема
+							input.contactToUs__subject(type='text' name='subject')
+					div.contactToUs
+						label.contactToUs__label
+							.contactToUs__description-message Сообщение
+							textarea.contactToUs__message(name='message' rows="4" cols="40")
+					div.contactToUs
+						input.contactToUs__submit(type='submit' name='submit' value='Отправить')
+						input.contactToUs__reset(type='reset' name='reset' value='Сбросить')
+
+			h2.address__head Адрес
+			ul.address__items
+				li.address__item Москва, Ходынское поле, д. 10
+				li.address__item nowindcity@mail.ru
+				li.address__item +7 993 123 45 56
+
+			include ../../js/partials/yandexmap.js
+
+				
+
+
+
+
+	
+
+	

@@ -1,0 +1,31 @@
+.menu__items {
+	list-style: none;
+	margin: 10px 0;
+	padding: 0;
+	font-size: 0;
+
+	.menu__item {
+	display: inline-block;
+	width: 33.33%;
+	text-align: center;
+	font-size: 16px;
+	}
+
+	.menu__link {
+		border-radius: 3px;
+		line-height: 35px;
+		color: #bcbcbc;
+		text-decoration: none;
+		display: block;
+
+		&:hover {
+			color: lightblue;
+			}
+
+		&.menu__link_active {
+			background: lightblue;
+			color: white;
+			}
+	}
+
+}

@@ -1,0 +1,21 @@
+include _common/mixin
+
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		block title
+			title Default title
+		link(rel='shortcut icon' href='/images/favicon.png' type='image/x-icon')
+		link(rel='stylesheet' type='text/css' href='css/main.css')
+	body
+		div.wrapper
+			block header
+				include _common/header
+			block menu
+				include _common/menu
+			block main
+				include _common/main
+			block footer
+				include _common/footer
+		include ../js/main.js
