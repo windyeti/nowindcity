@@ -67,6 +67,17 @@
 	}
 }
 .maininfo {
+	.catalog__items {
+		&.clearfix:before,
+		&.clearfix:after {
+		    content: " "; /* 1 */
+		    display: table; /* 2 */
+		}
+		&.clearfix:after {
+		    clear: both;
+		}
+	}
+
 	.welcomeHead,
 	.mainhead,
 	.address__head {
@@ -98,4 +109,13 @@
 			}
 		}
 	}
+	.catalog__item {
+		border-radius: 3px;
+		padding: 0 20px 10px;
+		margin: 0 10px;
+		width: 140px;
+		border: 1px solid #25768e;
+		float: left;
+	}
+
 }

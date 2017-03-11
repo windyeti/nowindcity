@@ -9,12 +9,13 @@ mixin menu(items, current)
 					a.menu__link(href=key+'.html')= item
 
 mixin catalog(items)
-	each item, key in items
-		div.catalog__item
-			a.catalog__item__link(href=key+'.html')
-				img.catalog__item__img(src='images/'+ key +'-'+ item +'-trumb.png' alt='Это фото паруса '+item title='Это фото паруса '+item)
-				div.catalog__item__description
-					div.catalog__item__model= item
+	div.catalog__items(class='clearfix')
+		each item, key in items
+			div.catalog__item
+				a.catalog__item__link(href=key+'.html')
+					img.catalog__item__img(src='images/'+ key +'-'+ item +'-trumb.png' alt='Это фото паруса '+item title='Это фото паруса '+item)
+					div.catalog__item__description
+						div.catalog__item__model= item
 
 mixin specific(items)
 	table.goods__specific__table
