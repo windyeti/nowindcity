@@ -22,7 +22,7 @@ block main
 							input.contactToUs__name(type='text' name='name' placeholder='введите ваше имя' required)
 					div.contactToUs
 						label.contactToUs__label
-							pan.contactToUs__description Пароль
+							span.contactToUs__description Пароль
 							input.contactToUs__password(type='password' name='password' placeholder='введите ваш пароль' required)
 					div.contactToUs
 						label.contactToUs__label 
@@ -34,7 +34,7 @@ block main
 							input.contactToUs__subject(type='text' name='subject')
 					div.contactToUs
 						label.contactToUs__label
-							.contactToUs__description-message Сообщение
+							span.contactToUs__description-message Сообщение
 							textarea.contactToUs__message(name='message' rows="4" cols="40")
 					div.contactToUs
 						input.contactToUs__submit(type='submit' name='submit' value='Отправить')
@@ -46,7 +46,7 @@ block main
 				li.address__item nowindcity@mail.ru
 				li.address__item +7 993 123 45 56
 
-			include ../../js/partials/yandexmap.js
+	include ../../js/partials/yandexmap.js
 
 				
 

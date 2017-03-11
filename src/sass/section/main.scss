@@ -2,12 +2,33 @@
 	.goods__mainHead,
 	.goods__head {
 		font-family: 'DINPro-Bold';
+		padding: 5px 10px;
 	}
 	.goods__head
 	{
 		font-size: 18px;
 		font-weight: 400;
 		background-color: #eaeaea;
+	}
+	.goods__link {
+		display: block;
+		width: 102px;
+	}
+	.goods__container {
+		border-radius: 3px;
+		width: 100px;
+		border: 1px solid #25768e;
+
+		&:hover {
+			border: 0;
+			height: 205px;
+			
+			& .goods__img {
+				position: relative;
+				top: 1px;
+				left: 1px;
+			}
+		}
 	}
 	.goods__textAboutShot {
 		color: #707070;
@@ -21,9 +42,28 @@
 		font-weight: 400;
 		line-height: 24px;
 		text-align: left;
+
+		.goods__text:first-letter {
+			color: #25768e;
+			font-size: 24px;
+		}
 	}
-	.goods__specific__items {
-		list-style-image: url('../images/icon-specific.svg');
+	.goods__specific__table {
+		border-spacing: 0;
+	}
+	.goods__specific__row:nth-child(2n+1) {
+		background-color: #dceff4;
+	}
+	.goods__specific__key,
+	.goods__specific__item
+	 {
+		padding: 5px 10px;
+	}
+	.goods__specific__key {
+		color: #25768E;
+	}
+	.goods__specific__item {
+		font-family: 'DINPro-Medium';
 	}
 }
 .maininfo {
@@ -33,6 +73,9 @@
 		font-family: 'DINPro-Bold'; 
 	}
 	.contactToUs {
+		.contactToUs__description-message {
+			display: block;
+		}
 		.contactToUs__description {
 			display: inline-block;
 			width: 90px;
@@ -46,6 +89,13 @@
 		height: 20px;
 		color: white;
 		background-color: lightgray;
+		text-transform: capitalize;
+		
+			&:focus {
+			color: #25768E;
+			background-color: #ADD8E6;
+
+			}
 		}
 	}
 }

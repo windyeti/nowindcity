@@ -17,9 +17,12 @@ mixin catalog(items)
 					div.catalog__item__model= item
 
 mixin specific(items)
-	ul.goods__specific__items
+	table.goods__specific__table
 		each item, key in items
-			if key == 'Площадь паруса'
-				li.goods__specific__item!= key + ' ' + item +' м<sup>2</sup>'
-			else
-				li.goods__specific__item!= key + ' ' + item
+			tr.goods__specific__row
+				if key == 'Площадь паруса'
+					td.goods__specific__key= key
+					td.goods__specific__item!= item +' м<sup>2</sup>'
+				else
+					td.goods__specific__key= key
+					td.goods__specific__item= item

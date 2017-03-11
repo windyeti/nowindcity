@@ -1,10 +1,10 @@
-@import '_layout/_mixin';
-@import '_layout/_variables';
-@import '_layout/_adjustment';
+@import '_layout//normalize.scss';
 
 //----------------
 
-@import '_layout//normalize.scss';
+@import '_layout/_mixin';
+@import '_layout/_variables';
+@import '_layout/_adjustment';
 
 //----------------
 
