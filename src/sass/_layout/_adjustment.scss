@@ -53,9 +53,25 @@
   font-weight: normal;
   font-style: normal;
 }
-* {
+.wrapper, .menu__item, .catalog__item {
   box-sizing: border-box;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+// ------ footer down -----
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+.footer {
+  margin-top: -40px;
+}
+// ------ footer down -----
 body {
 	font-family: 'DINPro';
 	background-color: #f8f8f8;

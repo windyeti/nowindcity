@@ -77,7 +77,27 @@
 		    clear: both;
 		}
 	}
-
+	.catalog__item {
+		border-radius: 3px;
+		padding: 0 20px 10px;
+		margin: 0 10px;
+		width: 20%;
+		border: 1px solid #25768e;
+		float: left;
+	}
+	.catalog__item__link {
+		text-decoration: none;
+	}
+	.catalog__item__img {
+		width: 100%;
+	}
+	.catalog__item__model {
+		text-align: center;
+		color: #25768E;
+	}
+	.catalog__item:hover .catalog__item__model {
+		color: #f05330;
+	}			
 	.welcomeHead,
 	.mainhead,
 	.address__head {
@@ -108,14 +128,6 @@
 
 			}
 		}
-	}
-	.catalog__item {
-		border-radius: 3px;
-		padding: 0 20px 10px;
-		margin: 0 10px;
-		width: 140px;
-		border: 1px solid #25768e;
-		float: left;
 	}
 
 }

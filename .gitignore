@@ -1,5 +1,7 @@
-.idea
-bower_components
+.idea 
+src/bower_components
 node_modules
 _work
 build
+build.zip
+.DS_Store
