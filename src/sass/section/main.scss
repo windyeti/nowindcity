@@ -97,6 +97,22 @@
 	}
 	.catalog__item:hover .catalog__item__model {
 		color: #f05330;
+	}
+	.catalog__item__button {
+		display: block;
+		font-family: 'DINPro';
+		width: 90%;
+		margin: 10px auto 5px;
+		border-radius: 3px;
+		border: 0;
+			&:hover {
+			background-color: #add8e6;
+			border: 0;
+			color: white;
+			}
+			&:active {
+			background-color: #1b95e0;
+			}
 	}			
 	.welcomeHead,
 	.mainhead,

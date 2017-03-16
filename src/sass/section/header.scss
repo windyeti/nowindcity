@@ -1,6 +1,21 @@
 .header {
+	border-bottom: 1px solid #add8e6;
+
+	&.clearfix:before,
+	&.clearfix:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+	&.clearfix:after {
+	    clear: both;
+	}
+
+	.logo {
+	width: 30%;
+	float: left;
+	}
 	.logo__img {
-	padding: 40px 0;
+	padding: 20px 0 0;
 	}
 	.logo__text {
 		position: absolute;
