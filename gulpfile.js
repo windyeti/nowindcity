@@ -79,7 +79,8 @@ gulp.task('build:js', function() {
 	.pipe(sourcemaps.init())
 	.pipe(sourcemaps.write('./'))
 	.pipe(gulp.dest(path.build.js))
-	.pipe(reload({stream:true}))
+	.pipe(reload({stream:true}));
+	gulp.start('build:html');
 });
 
 gulp.task('build:img', function() {

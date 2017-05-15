@@ -13,13 +13,14 @@ block main
 		article.maininfo
 			div.goods
 				h1.goods__mainHead Парус Vapor
-				a.goods__link(href='images/product02-VAPOR.png' target='_blank')
-					.goods__container
-						img.goods__img(src='images/product02-VAPOR-trumb.png' alt='Это фото паруса Vapor' title='Это фото паруса Vapor')
-				
-				h2.goods__head Описание товара
-				div.goods__textAboutShot
-					p.goods__text With the 2016 Vapor we had our most succesful season in the PWA slalom in recent years. Ross Williams did his first podium in the final Slalom ranking and archived the best result of his carrier, the same did Taty Frans finishing 6th, placing two Ga Vapors in the top 10 of the most hard fought windsurfing competition series in the world.
+				.goods__imgAndShot(class='clearfix')
+					a.goods__link(href='images/product02-VAPOR.png' target='_blank')
+						.goods__container
+							img.goods__img(src='images/product02-VAPOR-trumb.png' alt='Это фото паруса Vapor' title='Это фото паруса Vapor')
+					
+					h2.goods__head Описание товара
+					div.goods__textAboutShot
+						p.goods__text With the 2016 Vapor we had our most succesful season in the PWA slalom in recent years. Ross Williams did his first podium in the final Slalom ranking and archived the best result of his carrier, the same did Taty Frans finishing 6th, placing two Ga Vapors in the top 10 of the most hard fought windsurfing competition series in the world.
 				
 				h2.goods__head Характеристики товара
 				+specific({'Площадь паруса':'5.4, 5.8, 6.4, 7.1, 7.9, 8.6, 9.3, 9.6, 10.0, 11.0, 12.0', 'Количество лат': '6-8', 'Мачта' : '400-550', 'Вес' : '5.2-tbc'})
@@ -31,7 +32,7 @@ block main
 					p.goods__text We divided the range in 3 size groups: the two bigger sizes 9,3 and 9,6, most light wind oriented, the central sizes 8,6 to 7,1 more allround oriented, and the 6,4 and smaller sails more high wind oriented.
 					We found that the new foot geometry and the outline with no cross batten concept worked best for the 2 biggest slalom sizes (9.3 and 9.6), while for all the other sizes (5.4 to 8.6 and 10.0 to 12.0) the Cross batten still had an edge. We greatly increased the width of the mastsleeve and the volume in the front part of the sail by increasing the shape in the triple internal luff panels, both in the bottom and also higher up with . With that we drastically incredted the drag of the sail. The sleeve width proportionally reduces as the sail size decreases.
 					p.goods__text We worked on having a more connected leech twist so to not loose any little piece of wind energy. The rotation of the cambers is also much smoother and the acceleration out of the jibe is amazing.We opted for a small camber at the foot batten to help for this, while the two central big ones and the top small one remain the same, sizes 6.4 and below are exclusively equipped with the smaller camber. The top 4 batten pockets are integrated inside the panel overlap for a more simmetric, efficient, direct and lighter construction.
-
+				button.goods__button(type='button') КУПИТЬ
 
 	
 

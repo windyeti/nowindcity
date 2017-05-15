@@ -1,32 +1,56 @@
+.content.main {
+	padding-top: 20px;
+}
 .goods {
 	.goods__mainHead,
 	.goods__head {
 		font-family: 'DINPro-Bold';
 		padding: 5px 10px;
 	}
-	.goods__head
-	{
+	.goods__imgAndShot {
+		.goods__head {
+			overflow: hidden;
+			margin-top: 0;
+
+		}
+
+		&.clearfix:before,
+		&.clearfix:after {
+		    content: " "; /* 1 */
+		    display: table; /* 2 */
+		}
+		&.clearfix:after {
+		    clear: both;
+		}
+	}
+	.goods__head {
 		font-size: 18px;
 		font-weight: 400;
 		background-color: #eaeaea;
 	}
 	.goods__link {
+		//display: block;
+		//width: 102px;
+	}
+	.goods__img {
 		display: block;
-		width: 102px;
+		margin: 0 auto;
 	}
 	.goods__container {
 		border-radius: 3px;
-		width: 100px;
+		width: 200px;
 		border: 1px solid #25768e;
+		float: left;
+		margin-right: 20px;
 
 		&:hover {
 			border: 0;
-			height: 205px;
+			height: 202px;
+			width: 202px;
 			
 			& .goods__img {
 				position: relative;
 				top: 1px;
-				left: 1px;
 			}
 		}
 	}
@@ -65,6 +89,22 @@
 	.goods__specific__item {
 		font-family: 'DINPro-Medium';
 	}
+	.goods__button {
+		font-family: 'DINPro';
+		padding: 1.5em 3em;
+		border-radius: 10px;
+		border: 0;
+		background-color: #00ffbb;
+		color: #25768e;
+			&:hover {
+			background-color: #add8e6;
+			border: 0;
+			color: white;
+			}
+			&:active {
+			background-color: #1b95e0;
+			}
+	}
 }
 .maininfo {
 	.catalog__items {
@@ -97,24 +137,6 @@
 	}
 	.catalog__item:hover .catalog__item__model {
 		color: #f05330;
-	}
-	.catalog__item__button {
-		display: block;
-		font-family: 'DINPro';
-		font-size: .4em;
-		padding: .7em 1em;
-		width: 90%;
-		margin: 10px auto 5px;
-		border-radius: 3px;
-		border: 0;
-			&:hover {
-			background-color: #add8e6;
-			border: 0;
-			color: white;
-			}
-			&:active {
-			background-color: #1b95e0;
-			}
 	}			
 	.welcomeHead,
 	.mainhead,
