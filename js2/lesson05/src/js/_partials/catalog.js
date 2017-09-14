@@ -60,18 +60,11 @@ Catalog.prototype.renderGoods = function(goods) {
 		$divGood.appendTo(self.$divCatalog);
 	});
 	$('.good').on('click','.product_addNewReview', function() {
-		var $this = $(this);
-		var id_product = $this.closest('.good').attr('id').split('_')[1];
-		catalog.addNewReview(id_product);
+		this.idProductorAddNewReview = $(this).closest('.good').attr('id').split('_')[1];
+		catalog.addNewReview(this.idProductorAddNewReview);
 });
 }
 Catalog.prototype.addNewReview = function(id_product) {
-	this.newReview = this.modale();
-	var goodForAddNewReview = $(this.goods).filter(function() {
-		return this.id_product == id_product
-	});
-}
-Catalog.prototype.modale = function() {
 	this.$divModale = $('<div>').attr({'class':'modale'}).text('Введите текст отзыва.');
 	this.$formModale = $('<form>').attr({'class':'form_modale'});
 	( $('<input>').attr({'type':'text','class':'input_modale'}) ).appendTo(this.$formModale);
@@ -79,12 +72,33 @@ Catalog.prototype.modale = function() {
 	this.$divModale.append( this.$formModale );
 	this.$divModale.appendTo( $('body') );
 
+	this.goodForAddNewReview = $(this.goods).filter(function() {
+		return this.id_product == id_product;
+	});
+
+	var self = this;
+
 		$('.modale').on('click','.button_modale', function(e) {
 		e.preventDefault();
-		var $this = $(this);
-		return $this.parent().find('.input_modale').val();
+		self.newReviewText = $(this).parent().find('.input_modale').val();
+		self.$divModale.empty();
+		var $blockReviews = $('#product_' + id_product + ' .product_reviews');
+
+		var	$blockReview = $('<div>').attr({'class' : 'product_review'});
+			( $('<span>').attr({'class' : 'product_submit'}).text('0') ).appendTo($blockReview);
+			( $('<span>').attr({'class' : 'product_addPlus'}).text('+') ).appendTo($blockReview);
+			( $('<span>').attr({'class' : 'product_delete'}).text('-') ).appendTo($blockReview);
+			( $('<span>').attr({'class' : 'product_textAbout'}).text(self.newReviewText) ).appendTo($blockReview);
+
+		$blockReview.appendTo($blockReviews);
+		// var $newReview = $()
+
+		
 	});
 }
+// Catalog.prototype.modale = function() {
+// 		console.log(this.newReviewText);
+// }
 
 var catalog = new Catalog();
 catalog.render('#catalog-wrapper');
