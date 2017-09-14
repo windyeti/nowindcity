@@ -1,0 +1,54 @@
+.product_reviews {
+	border-top: 1px solid gray;
+}
+.product_review {
+	background-color: gray;
+	min-height: 25px;
+	border-top: 1px solid #fff;
+}
+.product_addNewReview {
+	float: right;
+	font-size: 50%;
+	// border: 1px solid blue;
+	background-color: blue;
+	border-radius: 2px;
+	cursor: pointer;
+	color: #fff;
+	padding: 3px;
+	&:hover {
+		background-color: darkblue;
+	}
+}
+.product_textAbout {
+	margin-right: 70px;
+}
+
+.product_delete, .product_submit, .product_addPlus {
+	float: right;
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	border-radius: 50%;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		background-color: darkred;
+	}
+
+}
+.product_button_buy {
+	margin-top: 10px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.product_submit {
+
+}
+.product_addPlus {
+
+}
+.product_delete {
+
+}

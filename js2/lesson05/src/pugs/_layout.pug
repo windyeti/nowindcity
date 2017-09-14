@@ -1,0 +1,18 @@
+include _common/_mixins
+include _common/_variables
+
+html
+	head
+		meta(charset='utf-8')
+		link(rel="stylesheet", href="css/main.css")
+		block title
+			title Заголовок шаблона
+	body
+		block mainContant
+			div Заготовка в шаблоне 
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='js/main.js')
+		block script
+			script.
+				console.log('подлючения _layout.pug');
+	

@@ -1,0 +1,46 @@
+extends ../_layout
+
+block title
+	title Корзина
+block mainContant
+	#basket-wrapper
+	.good
+		p Товар №1
+		p Цена: 
+			span.price 200
+		button#good_111.buy Купить 
+		button.showReview Показать отзывы
+	.good
+		p Товар №2
+		p Цена: 
+			span.price 150
+		button#good_112.buy Купить
+		button.showReview Показать отзывы 
+	.good
+		p Товар №3
+		p Цена: 
+			span.price 75
+		button#good_113.buy Купить
+		button.showReview Показать отзывы
+	#catalog-wrapper
+block script
+	script.
+		var basket = new Basket();
+		basket.render('#basket-wrapper');
+
+		$('.good').on('click', '.buy', function() {
+			var $this = $(this);
+			var idGood = $this.attr('id').split('_')[1];
+			var price = $this.parent().find('.price').text();
+
+			basket.add(idGood, 1, price);
+		});
+
+		//- var review = new Review();
+		//- review.getReviews('111');
+		//- $('.good').on('click', '.showReview', function() {
+		//- 	var $this = $(this);
+		//- 	var idGood = $this.parent().find('.buy').attr('id').split('_')[1];
+		//- 	//- console.log(§$this.text());
+		//- 	review.render(idGood, $this);
+		//- });
